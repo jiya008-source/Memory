@@ -9,6 +9,9 @@ const Posts = ({ setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   const classes = useStyles();
 
+  // 🔍 Add this line to see the posts data in the browser console
+  console.log('Posts:', posts);
+
   return (
     !posts.length ? <CircularProgress /> : (
       <Grid className={classes.container} container alignItems="stretch" spacing={3}>
